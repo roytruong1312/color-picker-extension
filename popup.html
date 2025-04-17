@@ -4,27 +4,38 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h3>Color Picker</h3>
-  <div type="color" id="color-display"></div>
-  
-  <div class="color-code-hex">
-    <span id="hex-code">HEX: </span>
-    <div id="color-code-display"></div>
-    <button id="copy-hex" onclick="copyColor()">Copy</button>
-  </div>
-  <!-- <div class="color-code-rgb">
-    <span id="hex-code">RGB: </span>
-    <div id="color-code-display"></div>
-    <button id="copy-rgb" onclick="copyColor()">Copy</button>
-  </div>
-  <div class="color-code-rgb">
-    <span id="hex-code">HSL: </span>
-    <div id="color-code-display"></div>
-    <button id="copy-hsl" onclick="copyColor()">Copy</button>
-  </div> -->
-  
-  <button id="pick-color">Pick a Color</button>
-    
+  <section class="header">
+    <p>Color Picker</p>
+  </section>
+  <section class="color-board">
+    <div type="color" class="color-display" id="color-display"></div>
+  </section>
+  <section class="color-code">
+    <form>
+      <p>
+        <select id="code-type-select">
+          <button>
+              <selectedcontent></selectedcontent>
+          </button>
+          <option value="hex">
+            <span class="option-label">HEX</span>
+          </option>
+          <option value="rgb">
+            <span class="option-label">RGB</span>
+          </option>
+          <option value="hsl">
+            <span class="option-label">HSL</span>
+          </option>
+        </select>
+      </p>
+    </form>
+    <div class="color-code-display" id="color-code-display">
+    </div>
+    <button class="copy-code">Copy</button>
+  </section>
+  <section class="pick-color-section">
+    <button id="pick-color">Pick a Color</button>
+  </section>
   <script src="popup.js"></script>
 </body>
 </html>
